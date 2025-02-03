@@ -1,7 +1,7 @@
 if [ -z "$1" ]; then
   echo "No argument supplied"
 else
-  for arg in "$@"; do
-     echo "$arg"
-  done
+  echo "$1"
+  echo "$2"
+  echo "$3"
 fi
