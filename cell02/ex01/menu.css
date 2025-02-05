@@ -1,9 +1,9 @@
 *{
-    margin = 0;
-    padding = 0;
+    margin: 0 ;
+    padding: 0 ;
 }
 .dropdown{
-    overflow= hidden;
+    overflow: hidden;
     max-width: fit-content;
 }
 .dropdown .dropdown-btn {
