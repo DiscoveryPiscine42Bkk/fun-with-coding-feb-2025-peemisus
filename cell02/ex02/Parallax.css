@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+}
+.parallax1{
+    background-image: url('https://i.redd.it/gtl3ni3rlch71.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding-top: 50%;
+    font-size: 200px;
+    color:white;
+}
+.text-box{
+    text-align: center;
+    color: white;
+    padding-top:50%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: black;
+    font-size: 200px;
+    color: aliceblue;
+}
+.parallax2{
+    background-image: url('https://m.media-amazon.com/images/S/pv-target-images/1ee2330505f6c9257b592e296236cdf917ac3499ac89cc39972ed2f8861c73c7.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-size: 200px;
+    text-align: center;
+    padding-top: 50%;
+    color:whitesmoke
+    
+}
