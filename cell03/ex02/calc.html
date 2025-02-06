@@ -17,6 +17,10 @@
     <input type="text" id="value2" name="value2">
     <button onclick="calculate()">Try me!</button>
     <script>
+        setInterval(displayalert, 30000);
+        function displayalert() {
+            alert("Please, use me...")
+        }
         function calculate() {
             let value1 = document.getElementById("value1").value;
             let value2 = document.getElementById("value2").value;
