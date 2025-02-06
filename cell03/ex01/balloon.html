@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+</head>
+<body>
+    <div id="balloon" style="font-size: 20px;">🎈</div>
+    <button onclick="inflate()">Inflate</button>
+    <button onclick="deflate()">Deflate</button>
+    <script>
+        const balloon = document.getElementById('balloon');
+        let size = 20;
+        const inflate = () => {
+            size += 10;
+            balloon.style.fontSize = size + 'px';
+            if (size > 60) {
+                balloon.textContent = '💥';
+                document.body.removeEventListener('click', inflate);
+                document.body.removeEventListener('click', deflate);
+            }
+        };
+        const deflate = () => {
+            size -= 10;
+            balloon.style.fontSize = size + 'px';
+            if (size < 20) {
+                balloon.textContent = '🎈';
+            }
+        };
+        document.body.addEventListener('click', inflate);
+        document.body.addEventListener('contextmenu', deflate);
+    </script>
+    
+</body>
+</html>
