@@ -26,6 +26,14 @@
             let value2 = document.getElementById("value2").value;
             let operator = document.getElementById("operator").value;
             let result = 0;
+            function isNumeric(value) {
+            return Number.isInteger(Number(value));
+            }
+            if (!isNumeric(value1) || !isNumeric(value2)) {
+                alert("Error :C");
+                console.log("Error :C");
+                return;
+            }
             if (value1 == "" || value2 == "") {
                 alert("Error :C");
                 console.log("Error :C");
