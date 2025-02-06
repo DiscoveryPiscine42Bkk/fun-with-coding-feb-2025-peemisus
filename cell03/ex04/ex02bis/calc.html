@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="text" id="value1" name="value1">
+    <select name="operator" id="operator">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+        <option value="mod">%</option>
+    </select>
+    <input type="text" id="value2" name="value2">
+    <button id="calculate-btn">Try me!</button>
+
+    <script>
+        setInterval(displayalert, 30000);
+        
+        function displayalert() {
+            alert("Please, use me...");
+        }
+
+        function isNumeric(value) {
+            return $.isNumeric(value);
+        }
+
+        $('#calculate-btn').on('click', function() {
+            let value1 = $('#value1').val();
+            let value2 = $('#value2').val();
+            let operator = $('#operator').val();
+            let result = 0;
+
+            if (!isNumeric(value1) || !isNumeric(value2)) {
+                alert("Error :C");
+                console.log("Error :C");
+                return;
+            }
+            
+            if (value1 === "" || value2 === "") {
+                alert("Error :C");
+                console.log("Error :C");
+                return;
+            }
+            
+            if ((value2 == 0 && (operator == "div" || operator == "mod"))) {
+                alert("Its over 9000!");
+                console.log("Its over 9000!");
+                return;
+            }
+
+            if (operator == "add") {
+                result = parseFloat(value1) + parseFloat(value2);
+            } else if (operator == "sub") {
+                result = parseFloat(value1) - parseFloat(value2);
+            } else if (operator == "mul") {
+                result = parseFloat(value1) * parseFloat(value2);
+            } else if (operator == "div") {
+                result = parseFloat(value1) / parseFloat(value2);
+            } else if (operator == "mod") {
+                result = parseFloat(value1) % parseFloat(value2);
+            }
+
+            if (value1 < 0 || value2 < 0) {
+                alert("Error :C");
+                console.log("Error :C");
+                return;
+            }
+            
+            if (isNaN(result)) {
+                alert("Error :C");
+                console.log("Error :C");
+                return;
+            }
+            
+            alert("Result: " + result);
+            console.log("Result: " + result);
+        });
+    </script>
+</body>
+</html>
