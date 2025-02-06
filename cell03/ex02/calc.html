@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="text" id="value1" name="value1">
+    <select name="operator" id="operator">
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+        <option value="mod">%</option>
+    </select>
+    <input type="text" id="value2" name="value2">
+    <button onclick="calculate()">Try me!</button>
+    <script>
+        function calculate() {
+            let value1 = document.getElementById("value1").value;
+            let value2 = document.getElementById("value2").value;
+            let operator = document.getElementById("operator").value;
+            let result = 0;
+            if (value1 == "" || value2 == "") {
+                alert("Error :C");
+                console.log("Error :C");
+                return;
+            }
+            if ((value2 == 0 && operator == "div")||(value2 == 0 && operator == "mod")) {
+                alert("Its over 9000!");
+                console.log("Its over 9000!");
+                return;
+            }
+            if (operator == "add") {
+                result = parseFloat(value1) + parseFloat(value2);
+            } else if (operator == "sub") {
+                result = parseFloat(value1) - parseFloat(value2);
+            } else if (operator == "mul") {
+                result = parseFloat(value1) * parseFloat(value2);
+            } else if (operator == "div") {
+                result = parseFloat(value1) / parseFloat(value2);
+            } else if (operator == "mod") {
+                result = parseFloat(value1) % parseFloat(value2);
+            }
+            if((value1 < 0) ||(value2 < 0)) {
+                alert("Error :C");
+                console.log("Error :C");
+                return;
+            }
+            if(isNaN(result)) {
+                alert("Error :C");
+                console.log("Error :C");
+                return;
+            }
+            alert("Result: " + result);
+            console.log("Result: " + result);
+        }
+    </script>
+</body>
+</html>
